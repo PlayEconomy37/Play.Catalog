@@ -3,4 +3,4 @@ vendor/
 .env
 .envrc
 tls/
-assets/cert/
+assets/cert/*
