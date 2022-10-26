@@ -483,7 +483,7 @@ func TestUpdateItemHandler(t *testing.T) {
 
 	tests := []struct {
 		testName           string
-		idUrlParam         string
+		idURLParam         string
 		name               string
 		description        string
 		price              float64
@@ -507,7 +507,7 @@ func TestUpdateItemHandler(t *testing.T) {
 			body["description"] = tt.description
 			body["price"] = tt.price
 
-			statusCode, _, resBody := ts.put(t, fmt.Sprintf("/items/%s", tt.idUrlParam), body, true, accessTokenUser1)
+			statusCode, _, resBody := ts.put(t, fmt.Sprintf("/items/%s", tt.idURLParam), body, true, accessTokenUser1)
 
 			if statusCode != tt.wantedStatusCode {
 				t.Errorf("want %d; got %d", tt.wantedStatusCode, statusCode)
@@ -532,9 +532,9 @@ func TestUpdateItemHandler(t *testing.T) {
 
 	// -----------------------------
 
-	malformedJsonTest := struct {
+	malformedJSONTest := struct {
 		testName           string
-		idUrlParam         string
+		idURLParam         string
 		name               string
 		description        string
 		price              string
@@ -551,25 +551,25 @@ func TestUpdateItemHandler(t *testing.T) {
 	}
 
 	body = map[string]any{}
-	body["name"] = malformedJsonTest.name
-	body["description"] = malformedJsonTest.description
-	body["price"] = malformedJsonTest.price
+	body["name"] = malformedJSONTest.name
+	body["description"] = malformedJSONTest.description
+	body["price"] = malformedJSONTest.price
 
-	statusCode, _, resBody := ts.put(t, fmt.Sprintf("/items/%s", malformedJsonTest.idUrlParam), body, true, accessTokenUser1)
+	statusCode, _, resBody := ts.put(t, fmt.Sprintf("/items/%s", malformedJSONTest.idURLParam), body, true, accessTokenUser1)
 
-	if statusCode != malformedJsonTest.wantedStatusCode {
-		t.Errorf("want %d; got %d", malformedJsonTest.wantedStatusCode, statusCode)
+	if statusCode != malformedJSONTest.wantedStatusCode {
+		t.Errorf("want %d; got %d", malformedJSONTest.wantedStatusCode, statusCode)
 	}
 
-	if !bytes.Contains(resBody, malformedJsonTest.wantedResponseBody) {
-		t.Errorf("want body %q to contain %q", resBody, malformedJsonTest.wantedResponseBody)
+	if !bytes.Contains(resBody, malformedJSONTest.wantedResponseBody) {
+		t.Errorf("want body %q to contain %q", resBody, malformedJSONTest.wantedResponseBody)
 	}
 
 	// -----------------------------
 
 	unknownKeyTest := struct {
 		testName           string
-		idUrlParam         string
+		idURLParam         string
 		name               string
 		description        string
 		invalid            float64
@@ -590,7 +590,7 @@ func TestUpdateItemHandler(t *testing.T) {
 	body["description"] = unknownKeyTest.description
 	body["invalid"] = unknownKeyTest.invalid
 
-	statusCode, _, resBody = ts.put(t, fmt.Sprintf("/items/%s", unknownKeyTest.idUrlParam), body, true, accessTokenUser1)
+	statusCode, _, resBody = ts.put(t, fmt.Sprintf("/items/%s", unknownKeyTest.idURLParam), body, true, accessTokenUser1)
 
 	if statusCode != unknownKeyTest.wantedStatusCode {
 		t.Errorf("want %d; got %d", unknownKeyTest.wantedStatusCode, statusCode)
