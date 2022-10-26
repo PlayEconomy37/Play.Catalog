@@ -56,3 +56,5 @@ jobs:
 
       - name: Run tests
         run: go test -race -vet=off ./...
+        env:
+          RSA__PublicKey: ${{ secrets.RSA_PUBLIC_KEY }}

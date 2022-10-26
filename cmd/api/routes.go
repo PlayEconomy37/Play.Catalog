@@ -3,7 +3,6 @@ package main
 import (
 	"net/http"
 
-	"github.com/PlayEconomy37/Play.Catalog/assets"
 	"github.com/go-chi/chi/v5"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/riandyrn/otelchi"
@@ -25,7 +24,7 @@ func (app *Application) routes() http.Handler {
 	router.Get("/healthcheck", app.healthCheckHandler)
 
 	router.Route("/items", func(r chi.Router) {
-		r.Use(app.Authenticate(app.UsersRepository, assets.EmbeddedFiles))
+		r.Use(app.Authenticate(app.UsersRepository, app.Config.RSA.PublicKey))
 
 		r.With(app.RequirePermission(app.UsersRepository, "catalog:read")).Get("/", app.getItemsHandler)
 		r.With(app.RequirePermission(app.UsersRepository, "catalog:read")).Get("/{id}", app.getItemHandler)

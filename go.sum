@@ -102,8 +102,8 @@ github.com/Microsoft/hcsshim/test v0.0.0-20210227013316-43a75bb4edd3/go.mod h1:m
 github.com/NYTimes/gziphandler v0.0.0-20170623195520-56545f4a5d46/go.mod h1:3wb06e3pkSAbeQ52E9H9iFoQsEEwGN64994WTCIhntQ=
 github.com/NYTimes/gziphandler v1.1.1/go.mod h1:n/CVRwUEOgIxrgPvAQhUUr9oeUtvrhMomdKFjzJNB0c=
 github.com/OneOfOne/xxhash v1.2.2/go.mod h1:HSdplMjZKSmBqAxg5vPj2TmRDmfkzw+cTzAElWljhcU=
-github.com/PlayEconomy37/Play.Common v1.0.66 h1:003kmENlGQUUhV7kXMhtJw2jQFmYjr8OAiY0GydZQTU=
-github.com/PlayEconomy37/Play.Common v1.0.66/go.mod h1:MM3gfRIlVtOBGXMkloUrtU2c8Y3eWfzElKrTyMixEec=
+github.com/PlayEconomy37/Play.Common v1.0.73 h1:ITLxiEQznx1HiRSDhz0q1qO9dpbMGuMUNq0BbV9NU7E=
+github.com/PlayEconomy37/Play.Common v1.0.73/go.mod h1:MM3gfRIlVtOBGXMkloUrtU2c8Y3eWfzElKrTyMixEec=
 github.com/PuerkitoBio/purell v1.0.0/go.mod h1:c11w/QuzBsJSee3cPx9rAFu61PvFxuPbtSwDGJws/X0=
 github.com/PuerkitoBio/purell v1.1.1/go.mod h1:c11w/QuzBsJSee3cPx9rAFu61PvFxuPbtSwDGJws/X0=
 github.com/PuerkitoBio/urlesc v0.0.0-20160726150825-5bd2802263f2/go.mod h1:uGdkoq3SwY9Y+13GIhn11/XLaGBb4BfwItxLd5jeuXE=

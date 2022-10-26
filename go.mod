@@ -3,7 +3,7 @@ module github.com/PlayEconomy37/Play.Catalog
 go 1.19
 
 require (
-	github.com/PlayEconomy37/Play.Common v1.0.66
+	github.com/PlayEconomy37/Play.Common v1.0.73
 	github.com/go-chi/chi/v5 v5.0.7
 	github.com/prometheus/client_golang v1.13.0
 	github.com/riandyrn/otelchi v0.4.0
